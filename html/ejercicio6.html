@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #positionDisplay{
+
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px; ;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="../html/Ejercicio1.html">Ejercicio 1</a></li>
+           <li> <a href="../html/Ejercicio2.html">Ejercicio 2</a></li>
+            <li><a href="../html/ejercicio3.html">Ejercicio 3</a></li>
+           <li> <a href="../html/ejercicio4.html">Ejercicio 4</a></li>
+
+
+        
+    </ul>
+
+    <div id="positionDisplay">Posicion del raton: X:0, Y:0</div>
+
+    <script>
+
+        const positionDisplay=document.getElementById('positionDisplay');
+
+        window.addEventListener('mousemove', (event)=>{
+
+            const x=event.clientX;
+            const y=event.clientY;
+
+            positionDisplay.textContent=`Posicion del raton: X: ${x}, Y:${y}`;
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empleados</title>
+</head>
+<body>
+    <h2>Agregar Empleados</h2>
+
+    
+    <form id="employeeForm">
+        <label for="codigo">Código del Empleado:</label>
+        <input type="text" id="codigo" placeholder="Introduce el código">
+
+        <label for="nombre">Nombre del Empleado:</label>
+        <input type="text" id="nombre" placeholder="Introduce el nombre">
+
+       
+        <button type="button" onclick="agregarEmpleado()">Agregar Empleado</button>
+    </form>
+
+    <h3>Lista de Empleados</h3>
+    
+    <table id="employeeTable" border="1">
+        <thead>
+            <tr>
+                <th>Código</th>
+                <th>Nombre</th>
+            </tr>
+        </thead>
+        <tbody>
+         
+        </tbody>
+    </table>
+
+    <script>
+        
+        function agregarEmpleado() {
+           
+            const codigo = document.getElementById("codigo").value;
+            const nombre = document.getElementById("nombre").value;
+
+           
+            if (codigo === "" || nombre === "") {
+                alert("Por favor, completa ambos campos antes de agregar.");
+                return;
+            }
+
+           
+            const tabla = document.getElementById("employeeTable").getElementsByTagName("tbody")[0];
+
+            
+            const nuevaFila = tabla.insertRow();
+
+            
+            const celdaCodigo = nuevaFila.insertCell(0);
+            const celdaNombre = nuevaFila.insertCell(1);
+            celdaCodigo.textContent = codigo;
+            celdaNombre.textContent = nombre;
+
+           
+            document.getElementById("codigo").value = "";
+            document.getElementById("nombre").value = "";
+        }
+    </script>
+</body>
+</html>

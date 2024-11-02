@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function toggleVisibility(id){
+
+            const parrafo=document.getElementById(id);
+            const link=document.getElementById("link-"+id);
+
+            if(parrafo.style.display === "none"){
+
+                parrafo.style.display="block";
+                link.textContent="Ocultar contenido";
+            }
+            else{
+
+                parrafo.style.display="none";
+                link.textContent="Mostrar contenido"
+            }
+        }
+
+
+    </script>
+    <p id="parrafo1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam recusandae reprehenderit fugit, perferendis quae inventore et praesentium velit sed quod quaerat ipsum vero excepturi doloribus quasi sapiente, quam, ut voluptatibus.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi neque optio aliquid, quis ea non. Sit, reprehenderit illum. Quas cum nam praesentium architecto vel nobis tempora cupiditate aliquid temporibus est!
+
+    </p>
+    <ul>
+        <li>
+            <a id="link-parrafo1" href="javascript:void(0);" onclick="toggleVisibility('parrafo1')">Ocultar contenido</a>
+        </li>
+    </ul>
+    <p id="parrafo2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam recusandae reprehenderit fugit, perferendis quae inventore et praesentium velit sed quod quaerat ipsum vero excepturi doloribus quasi sapiente, quam, ut voluptatibus.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi neque optio aliquid, quis ea non. Sit, reprehenderit illum. Quas cum nam praesentium architecto vel nobis tempora cupiditate aliquid temporibus est!
+
+    </p >
+    <ul>
+        <li>
+            <a id="link-parrafo2" href="javascript:void(0);" onclick="toggleVisibility('parrafo2')">Ocultar contenido</a>
+        </li>
+    </ul>
+    <p id="parrafo3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam recusandae reprehenderit fugit, perferendis quae inventore et praesentium velit sed quod quaerat ipsum vero excepturi doloribus quasi sapiente, quam, ut voluptatibus.
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi neque optio aliquid, quis ea non. Sit, reprehenderit illum. Quas cum nam praesentium architecto vel nobis tempora cupiditate aliquid temporibus est!
+
+    </p>
+    <ul>
+        <li>
+            <a id="link-parrafo3" href="javascript:void(0);" onclick="toggleVisibility('parrafo3')">Ocultar contenido</a>
+        </li>
+    </ul>
+</body>
+</html>
